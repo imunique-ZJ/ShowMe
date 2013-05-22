@@ -7,5 +7,6 @@
 
     <string name="search">Go!</string>
     <string name="search_hint" >Search Items</string>
+    <string name="no_result">Oops! Nothing found.</string>
 
 </resources>
