@@ -1,5 +1,8 @@
 package loopz.showme.bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by chihzhe on 2013/5/22.
  */
@@ -8,8 +11,8 @@ public class Grocery {
     private String itemName;
     private int scoreUp;
     private int scoreDown;
-//    private String comment;
-//    private String img;
+    private List<Comment> comments = new ArrayList<Comment>(0);
+    private String img;
 
     public long getId() {
         return id;
@@ -41,5 +44,21 @@ public class Grocery {
 
     public void setScoreDown(int scoreDown) {
         this.scoreDown = scoreDown;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

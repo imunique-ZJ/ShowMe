@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.SearchView;
 import loopz.showme.adapter.SearchListAdapter;
 
 public class SearchableActivity extends Activity {
 
+    private SearchView searchBar;
     private SearchListAdapter adapter;
 
     @Override
@@ -38,12 +40,14 @@ public class SearchableActivity extends Activity {
     }
 
     private void initView() {
+        searchBar = (SearchView) findViewById(R.id.searchBar);
         adapter = new SearchListAdapter(this);
     }
 
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
+            searchBar.setQuery(query, false);
             Log.d("loopz", "query= " + query);
             doSearch(query);
         }
