@@ -1,12 +1,16 @@
 package loopz.showme.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by chihzhe on 2013/5/22.
  */
-public class Grocery {
+public class Grocery implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private long id;
     private String itemName;
     private int scoreUp;

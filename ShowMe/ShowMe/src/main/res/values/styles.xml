@@ -20,4 +20,17 @@
     <style name="SuperLargeText" parent="@android:style/TextAppearance.Holo.Large">
         <item name="android:textSize">64sp</item>
     </style>
+
+    <style name="ScoreUp" parent="@android:style/TextAppearance.Holo.Medium">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@android:color/holo_red_light</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="ScoreDown" parent="@android:style/TextAppearance.Holo.Medium">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
 </resources>

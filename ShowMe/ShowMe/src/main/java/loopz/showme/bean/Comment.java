@@ -1,10 +1,17 @@
 package loopz.showme.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by chihzhe on 2013/5/26.
  */
-public class Comment {
+public class Comment implements Serializable {
+
+    private static final long serialVersionUID = 2L;
+
     private long id;
+    private long itemId;
+    private String userName;
     private String comment;
     private int score;
 
@@ -14,6 +21,22 @@ public class Comment {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(long itemId) {
+        this.itemId = itemId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getComment() {

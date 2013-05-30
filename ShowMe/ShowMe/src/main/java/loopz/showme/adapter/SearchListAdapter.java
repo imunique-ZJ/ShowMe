@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import loopz.showme.R;
+import loopz.showme.bean.Comment;
 import loopz.showme.bean.Grocery;
 
 import java.util.ArrayList;
@@ -17,10 +18,80 @@ import java.util.List;
  */
 public class SearchListAdapter extends BaseAdapter {
     private List<Grocery> dataList = new ArrayList<Grocery>();
+    private Context context;
     private LayoutInflater layoutInflater;
 
     public SearchListAdapter(Context context) {
         layoutInflater = LayoutInflater.from(context);
+        addTestData();
+    }
+
+    private void addTestData() {
+        List<Comment> comments = new ArrayList<Comment>();
+        Comment c = new Comment();
+        c.setId(0);
+        c.setComment("good good eat!");
+        c.setScore(1);
+        comments.add(c);
+
+        c = new Comment();
+        c.setId(1);
+        c.setComment("awsome!");
+        c.setScore(1);
+        comments.add(c);
+
+        c = new Comment();
+        c.setId(2);
+        c.setComment("wtf");
+        c.setScore(-1);
+        comments.add(c);
+
+        Grocery grocery = new Grocery();
+        grocery.setId(0);
+        grocery.setItemName("luke");
+        grocery.setScoreDown(10);
+        grocery.setScoreUp(100);
+        grocery.setComments(comments);
+        dataList.add(grocery);
+
+        grocery = new Grocery();
+        grocery.setId(1);
+        grocery.setItemName("浩文哥");
+        grocery.setScoreDown(5);
+        grocery.setScoreUp(999);
+        grocery.setComments(comments);
+        dataList.add(grocery);
+
+        grocery = new Grocery();
+        grocery.setId(2);
+        grocery.setItemName("浩文糕");
+        grocery.setScoreDown(5);
+        grocery.setScoreUp(999);
+        grocery.setComments(comments);
+        dataList.add(grocery);
+
+        grocery = new Grocery();
+        grocery.setId(3);
+        grocery.setItemName("option");
+        grocery.setScoreDown(10);
+        grocery.setScoreUp(100);
+        grocery.setComments(comments);
+        dataList.add(grocery);
+
+        grocery = new Grocery();
+        grocery.setId(4);
+        grocery.setItemName("WeiDe");
+        grocery.setScoreDown(10);
+        grocery.setScoreUp(100);
+        dataList.add(grocery);
+
+        grocery = new Grocery();
+        grocery.setId(5);
+        grocery.setItemName("偉德糕");
+        grocery.setScoreDown(5);
+        grocery.setScoreUp(999);
+        grocery.setComments(comments);
+        dataList.add(grocery);
     }
 
     @Override
