@@ -49,6 +49,8 @@ public class SearchListAdapter extends BaseAdapter {
         Grocery grocery = new Grocery();
         grocery.setId(0);
         grocery.setItemName("luke");
+        grocery.setManufacturer("浩克製造");
+        grocery.setDescription("感覺不錯");
         grocery.setScoreDown(10);
         grocery.setScoreUp(100);
         grocery.setComments(comments);
@@ -65,6 +67,8 @@ public class SearchListAdapter extends BaseAdapter {
         grocery = new Grocery();
         grocery.setId(2);
         grocery.setItemName("浩文糕");
+        grocery.setManufacturer("浩克製造");
+        grocery.setDescription("感覺不錯");
         grocery.setScoreDown(5);
         grocery.setScoreUp(999);
         grocery.setComments(comments);
@@ -73,6 +77,8 @@ public class SearchListAdapter extends BaseAdapter {
         grocery = new Grocery();
         grocery.setId(3);
         grocery.setItemName("option");
+        grocery.setManufacturer("阿普森科技");
+        grocery.setDescription("感覺很不錯");
         grocery.setScoreDown(10);
         grocery.setScoreUp(100);
         grocery.setComments(comments);
@@ -88,6 +94,8 @@ public class SearchListAdapter extends BaseAdapter {
         grocery = new Grocery();
         grocery.setId(5);
         grocery.setItemName("偉德糕");
+        grocery.setManufacturer("阿普森科技");
+        grocery.setDescription("感覺很不錯");
         grocery.setScoreDown(5);
         grocery.setScoreUp(999);
         grocery.setComments(comments);

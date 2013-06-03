@@ -13,6 +13,8 @@ public class Grocery implements Serializable {
 
     private long id;
     private String itemName;
+    private String manufacturer;
+    private String description;
     private int scoreUp;
     private int scoreDown;
     private List<Comment> comments = new ArrayList<Comment>(0);
@@ -32,6 +34,22 @@ public class Grocery implements Serializable {
 
     public void setItemName(String itemName) {
         this.itemName = itemName;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getScoreUp() {

@@ -15,6 +15,8 @@ import loopz.showme.bean.Grocery;
 public class ItemInfoActivity extends Activity implements ListView.OnScrollListener {
     private CommentAdapter mAdapter;
     private ImageView itemImage;
+    private TextView manufacturerTV;
+    private TextView descriptionTV;
     private TextView empty;
     private ListView comments;
 
@@ -51,6 +53,8 @@ public class ItemInfoActivity extends Activity implements ListView.OnScrollListe
 
     private void initView() {
         itemImage = (ImageView) findViewById(R.id.item_image);
+        manufacturerTV = (TextView) findViewById(R.id.manufacturer);
+        descriptionTV  = (TextView) findViewById(R.id.description);
         comments  = (ListView)  findViewById(R.id.comments);
         empty     = (TextView)  findViewById(R.id.empty_list);
         mAdapter  = new CommentAdapter(this);
@@ -62,6 +66,9 @@ public class ItemInfoActivity extends Activity implements ListView.OnScrollListe
         // show image
         // grocery.getImg();
         itemImage.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
+
+        manufacturerTV.setText(grocery.getManufacturer());
+        descriptionTV .setText(grocery.getDescription());
 
         // show comments
         mAdapter.setDataList(grocery.getComments());
